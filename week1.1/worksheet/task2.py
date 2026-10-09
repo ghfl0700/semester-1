@@ -20,7 +20,7 @@ total_saved = every_month * 12
 # Calculate the total amount of money including interest (0.8% of the final annual amount) they will have saved in a year.
 # print this out in the format £X.XX (to two decimal places).
 
-interest = total_saved * 0.08
-Final_amount = int(total_saved) + int(interest) 
-print(f"Welcome to enter the integer final amount is £{Final_amount:.2f}")
+interest = total_saved * 0.008
+Final_amount = total_saved + interest 
+print(f"Welcome to enter final amount is £{Final_amount:.2f}")
 
