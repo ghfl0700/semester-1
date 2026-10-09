@@ -9,8 +9,8 @@ print(f"Welcome to LeedsBank's savings calculator {name}!")
 
 # Ask the user to input an amount they want to save every month - this should be an integer.
 # Validate that they have entered an integer.
-
-every_month = int(input("How much do you want to save every month:") )
+try: every_month = int(input("How much do you want to save every month:") )
+except: print("Please enter the integer number only")
 
 # Calculate the total amount of money they will have saved by the end of the year (amount per month multiplied by 12).
 # print this out for the user with a suitable message.
