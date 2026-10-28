@@ -1,6 +1,8 @@
 # a basic Hello World program - write your code under this line
-print("hello world")
+
 name = "Ivy"
-date = "04-10-2026"
-name = input("what is your name")
+birth_date = "04-10-2007"
+hobby = "badminton"
+
+print (f"Hello World! My name is {name}. My birthday is {birth_date}. My hobby is {hobby}.")
 
