@@ -8,10 +8,11 @@ class Person:
     """
 
     def __init__(self, name, birth):
-
+       
     # Write a constructor here to create and initialize name and
     # birth fields (see README.md for further details)
 
+        """Initialise a Person with name and birth date."""
         if type(name) is not str:
             raise TypeError
         if type(birth) is not date:
@@ -26,6 +27,7 @@ class Person:
     # (see README.md for further details)
 
     def initials(self):
+        """Return the initials of the name."""
         name_part = self.name.split()
         result = ""
         for part in name_part:
@@ -34,6 +36,7 @@ class Person:
         return result 
 
     def is_birthday(self):
+        """Check if today is the birthday."""
         today = date.today()
         if today.month == self.birth.month and today.day == self.birth.day:
             return True
