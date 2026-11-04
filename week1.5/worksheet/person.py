@@ -16,6 +16,8 @@ class Person:
             raise TypeError
         if type(birth) is not date:
             raise TypeError
+        if len(name.strip()) == 0:
+            raise ValueError("name cannot be an empty string")
 
         self.name = name
         self.birth = birth

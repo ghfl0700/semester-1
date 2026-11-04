@@ -11,6 +11,15 @@ class Rectangle:
         # Add code here to check type and value of provided width & height,
         # raising appropriate exceptions if necessary (see README.md)
 
+        if type(width) is not int:
+            raise TypeError
+        if type(height) is not int:
+            raise TypeError
+        if width <= 0:
+            raise ValueError
+        if height <= 0:
+            raise ValueError
+        
         self.width = width
         self.height = height
 
