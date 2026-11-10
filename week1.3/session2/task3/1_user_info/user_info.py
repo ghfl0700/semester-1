@@ -3,7 +3,21 @@
 
 # Prompt the user for their name, age, and favorite colour.
 
+while True:
+    name = input("Enter your name:")
+    if name == "stop":
+        break
+    age = input("Enter your age:")
+    colour = input("Enter your favourite colour:")
+
 # Open a file called 'user_info.txt' for reading
+
+with open("user_info.txt", "w") as f:
+    f.write(name + "\n")
+    f.write(age + "\n")
+    f.write(colour + "\n")
+
+
 
 # Write each piece of information to the file, each on a new line.
 

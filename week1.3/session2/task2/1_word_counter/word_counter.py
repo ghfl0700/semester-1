@@ -5,11 +5,19 @@
 
 # open and read the file
 
+with open("1_word_counter/story2.txt", "r") as f:
+    content = f.read()
+
 # calculate the number of words
 # hint: you could use .split() to break up by spaces
 # hint: watch out for empty lines that might give you empty strings
 
+words = content.split()
+wordcount = len(words)
+
 # display the wordcount
+
+print("wordcount:", wordcount)
 
 # Here are the word counts you should get:
 # story.txt - 290
