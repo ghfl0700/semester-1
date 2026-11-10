@@ -2,6 +2,27 @@
 
 # Open 'student_data.csv' to read each student's grades
 # hint: skip the header row with data[1:]
+try:
+    with open("student_data.csv", "r") as f:
+        lines = f.readlines()
+
+    with open("report.txt", "w") as final_file:
+        for line in lines[1:]:
+            line = line.strip()
+            parts = line.split(",")
+            ID= parts[0]
+            Name = parts[1]
+            Mathematics = int(parts[2])
+            Science = int(parts[3])
+            History = int(parts[4])
+
+            average = (Mathematics + Science + History) / 3
+
+            final_file.write(f"ID:{ID} {Name} average grade: {average:.2f}\n")
+
+except ValueError:
+    print("Value error")
+            
 
 
 # Read each student's grades and calculate their average grade
